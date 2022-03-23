@@ -1,0 +1,78 @@
+body , nav.navbar {
+    margin: 0;
+    padding: 0;
+    
+  }
+  nav.navbar ul {
+    margin: 0 auto ;
+    padding: 0 10px 0 10px;
+    width: fit-content;
+    letter-spacing: -1em;
+    overflow:hidden;
+  }
+  nav.navbar ul li {
+    display: inline-block;
+    padding: 15px px 15px 10px;
+    letter-spacing: normal;
+    list-style-type: none;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  nav.navbar ul li ul.dropdown {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    position: absolute;
+    margin-top: 0.9rem;
+    margin: 0.9rem auto 0 -0.8rem;
+    padding: 0;
+    width: fit-content;
+  }
+  nav.navbar ul li:hover > ul.dropdown,
+  nav.navbar ul li ul.dropdown:hover,
+  nav.navbar ul li ul.dropdown:focus {
+    /* This compound selector will still work in IE 11 because :focus-within isn't mixed in */
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+  nav.navbar ul li:focus-within > ul.dropdown {
+    /* IE 11 won't get this, but at least the top-level menus will work */
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+  nav.navbar li:focus-within a:focus {
+    // outline: none; // not recommanded
+    outline: 3px solid orange;
+  }
+  nav.navbar ul li ul.dropdown li {
+    clear: both;
+    width: 100%;
+  }
+  nav.navbar ul li a {
+    text-decoration: none;
+  }
+  
+  nav.navbar , nav.navbar ul {
+    
+  }
+  nav.navbar ul li a , nav.navbar ul li a:link , nav.navbar ul li a:visited {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    color:black;
+  }
+  nav.navbar ul li.active ,
+  nav.navbar ul li:hover ,
+  nav.navbar ul li:focus {
+    background-color: white;
+    color:black;
+  }
+  nav.navbar ul li:focus-within {
+    background-color: white;
+  }
+  
